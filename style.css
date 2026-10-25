@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #0b0f19;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(18, 24, 38, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #00d2ff;
+}
+
+.mode-btn, .admin-btn {
+  background: #00d2ff;
+  color: #0b0f19;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.3s;
+}
+
+.mode-btn:hover, .admin-btn:hover {
+  background: #00a8cc;
+  box-shadow: 0 0 12px #00d2ff;
+}
+
+/* Main Container */
+.container {
+  flex: 1;
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mode-section {
+  display: none;
+}
+
+.mode-section.active {
+  display: block;
+}
+
+/* Search Engine UI */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #161f30;
+  color: #fff;
+  font-size: 1.1rem;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 25px;
+  background: #00d2ff;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.safety-warning {
+  background: #ff4d4d22;
+  border: 1px solid #ff4d4d;
+  color: #ff6b6b;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(22, 31, 48, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 210, 255, 0.2);
+  border-color: #00d2ff;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  color: #00d2ff;
+}
+
+/* GLASSMORPHISM CALCULATOR UI (Matching Futuristic Design) */
+.calculator-container {
+  background: rgba(18, 25, 40, 0.85);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 25px;
+  backdrop-filter: blur(15px);
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+.calc-display {
+  background: #090d16;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.display-top {
+  font-size: 0.75rem;
+  color: #00d2ff;
+  letter-spacing: 1px;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.expression-line {
+  font-size: 1.1rem;
+  color: #a0aec0;
+  min-height: 24px;
+}
+
+.result-line {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+.ai-assist-badge {
+  font-size: 0.75rem;
+  color: #00d2ff;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 10px;
+  padding-top: 6px;
+  text-align: left;
+}
+
+.logic-explanation {
+  background: rgba(0, 210, 255, 0.05);
+  border-left: 3px solid #00d2ff;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
+/* Keypad Grid */
+.calc-keypad {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.key {
+  padding: 18px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(30, 41, 64, 0.8);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.1s;
+}
+
+.key:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 12px #00d2ff;
+}
+
+.action-key { background: #2d3748; }
+.operator-key { background: #1a365d; color: #00d2ff; }
+.side-key { background: #2b6cb0; color: #fff; font-size: 0.95rem; }
+.equals-key { background: #00d2ff; color: #0b0f19; box-shadow: 0 0 15px #00d2ff; }
+
+/* Modals */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex; justify-content: center; align-items: center;
+}
+
+.modal-content {
+  background: #161f30;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+}
+
+.hidden { display: none !important; }
+.close-btn { margin-top: 15px; background: #ff4d4d; color: #fff; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer;}
